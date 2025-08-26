@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Manual tokens matching all colors used in your component */
+@theme {
+  /* neutrals */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* slate */
+  --color-slate-50:  #f8fafc;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #9ca3af;
+  --color-slate-500: #6b7280;
+  --color-slate-700: #374151;
+  --color-slate-800: #1f2937;
+  --color-slate-900: #111827;
+
+  /* indigo (for chips, borders, rings, hovers) */
+  --color-indigo-50:  #eef2ff;
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-200: #c7d2fe;
+  --color-indigo-300: #a5b4fc;
+  --color-indigo-700: #4338ca;
+
+  /* amber (for conflict rings & notices) */
+  --color-amber-50:  #fffbeb;
+  --color-amber-300: #fcd34d;
+  --color-amber-700: #b45309;
+
+  /* red (for closed sections & dot) */
+  --color-red-50:  #fef2f2;
+  --color-red-200: #fecaca;
+  --color-red-500: #ef4444;
+
+  --color-slate-600: #475569;
+
+  /* indigo */
+  --color-indigo-800: #3730a3;
+
+  /* emerald (green “offered” dot) */
+  --color-emerald-500: #10b981;
+}
