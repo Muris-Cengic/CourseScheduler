@@ -35,7 +35,7 @@ interface CourseRecord {
 }
 
 // Study plans JSON (attached Study_Plans_2020.json)
-interface StudyPlanCourse { courseCode: string; courseName: string }
+interface StudyPlanCourse { courseCode: string; courseName: string, prerequisites?: string[]; }
 interface StudyPlanSemester { term: number; desc: string; courses: StudyPlanCourse[] }
 interface StudyPlanYear { year: string; semesters: StudyPlanSemester[] }
 interface StudyPlan {
@@ -109,6 +109,11 @@ const isCompatible = (chosen: Block[], candidate: Block[]) => {
   return true;
 };
 
+// Normalizes "NCS 3301" => "NCS3301"
+const normalize = (x: string) => (x || "").replace(/\s+/g, "").toUpperCase();
+
+
+
 /* -------------------- Component -------------------- */
 export default function CourseScheduler() {
   const [records, setRecords] = useState<CourseRecord[]>([]);
@@ -124,6 +129,8 @@ export default function CourseScheduler() {
   const [studyPlans, setStudyPlans] = useState<StudyPlan[]>([]);
   const [activePlanIndex, setActivePlanIndex] = useState<number>(0);
   const [expandedYears, setExpandedYears] = useState<Record<string, boolean>>({});
+  const [hoveredCode, setHoveredCode] = useState<string | null>(null);
+
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   // const planFileInputRef = useRef<HTMLInputElement | null>(null);
@@ -234,6 +241,48 @@ export default function CourseScheduler() {
     return m;
   }, [records]);
 
+// Active plan
+const activePlan = studyPlans[activePlanIndex];
+
+// course -> Set(prereqs) built from per-course "prerequisites" fields
+const prereqMap = useMemo(() => {
+  const out: Record<string, Set<string>> = {};
+  if (!activePlan) return out;
+
+  const addCourse = (code?: string, reqs?: string[]) => {
+    const key = normalize(code || "");
+    if (!key) return;
+    if (!out[key]) out[key] = new Set<string>();
+    (reqs || []).forEach(r => out[key].add(normalize(r)));
+  };
+
+  // yearly courses
+  for (const yr of activePlan.yearlyCourses || []) {
+    for (const sem of yr.semesters || []) {
+      for (const c of sem.courses || []) {
+        addCourse(c.courseCode, c.prerequisites);
+      }
+    }
+  }
+  // electives may also carry prerequisites
+  for (const e of activePlan.technicalElectives || []) {
+    addCourse(e.courseCode, (e as any).prerequisites);
+  }
+  return out;
+}, [activePlan]);
+
+// course -> Set(dependents)  (invert prereqMap)
+const dependentsMap = useMemo(() => {
+  const dep = new Map<string, Set<string>>();
+  for (const [course, reqs] of Object.entries(prereqMap)) {
+    reqs.forEach((r) => {
+      if (!dep.has(r)) dep.set(r, new Set());
+      dep.get(r)!.add(course);
+    });
+  }
+  return dep;
+}, [prereqMap]);
+
   const filteredTitles = useMemo(() => {
     const q = query.toLowerCase().trim();
     if (!q) return titles;
@@ -309,7 +358,7 @@ export default function CourseScheduler() {
 
   // Toggle select from Study Plan using the shared selection state
   const toggleSelectByCode = (codeRaw: string) => {
-    const code = codeRaw.toUpperCase();
+    const code = normalize(codeRaw);
     const info = codeToInfo.get(code);
     if (!info) return; // not offered in uploaded file
     const title = info.title;
@@ -321,7 +370,7 @@ export default function CourseScheduler() {
   };
 
   const isSelectedByCode = (codeRaw: string) => {
-    const info = codeToInfo.get(codeRaw.toUpperCase());
+    const info = codeToInfo.get(normalize(codeRaw));
     if (!info) return false;
     return selectedTitles.includes(info.title);
   };
@@ -501,6 +550,8 @@ export default function CourseScheduler() {
                     <div className="flex items-center gap-1"><span className="inline-block h-2 w-2 rounded-full bg-emerald-500"/> Offered in uploaded file</div>
                     <div className="flex items-center gap-1"><span className="inline-block h-2 w-2 rounded-full bg-slate-300"/> Not in dataset</div>
                     <div className="flex items-center gap-1"><span className="inline-block h-3 w-3 rounded-sm border border-indigo-300 bg-indigo-50"/> Selected</div>
+                    <div className="flex items-center gap-1"><span className="inline-block h-3 w-3 rounded-sm ring-2 ring-[#f59e0b] bg-[#fff7ed]" />Prerequisite (hover)</div>
+                    <div className="flex items-center gap-1"><span className="inline-block h-3 w-3 rounded-sm ring-2 ring-[#a855f7] bg-[#faf5ff]" />Dependent (hover)</div>
                   </div>
 
                   {/* Plan content */}
@@ -528,40 +579,72 @@ export default function CourseScheduler() {
                                       <div className="px-2 py-1.5 text-sm font-semibold text-slate-800 bg-white border-b border-slate-200">{sem.desc}</div>
                                       <div className="p-0 space-y-1">
                                         {(sem.courses || []).map((c) => {
-                                          const code = (c.courseCode || "").toUpperCase();
-                                          const info = codeToInfo.get(code);
-                                          const offered = !!info; // present in uploaded JSON
-                                          const selectable = offered && (titleToSections.get(info!.title) || []).length > 0;
-                                          const selected = offered && selectedTitles.includes(info!.title);
-                                          const placeholder = isPlaceholderElective(code);
-                                          return (
-                                            <div
-                                              key={`${sem.term}-${code}`}
-                                              className={[
-                                                "flex items-center justify-between gap-2 rounded-md border px-2 py-1 text-xs",
-                                                selected ? "bg-indigo-50 border-indigo-200" : "bg-white border-slate-200"
-                                              ].join(" ")}
-                                            >
-                                              <div className="min-w-0">
-                                                <div className="truncate font-medium text-slate-800" title={`${code} ${c.courseName}`}>{code} <span className="font-normal text-slate-700">{c.courseName}</span></div>
-                                                {placeholder && (
-                                                  <div className="text-[11px] text-slate-500">Choose from <em>Electives</em> below.</div>
-                                                )}
+                                            const codeRaw = c.courseCode || "";
+                                            const codeKey = normalize(codeRaw); // normalized for lookups
+
+                                            const info = codeToInfo.get(codeKey);
+                                            const offered = !!info; // present in uploaded JSON
+                                            const selectable = offered && (titleToSections.get(info!.title) || []).length > 0;
+                                            const selected = offered && selectedTitles.includes(info!.title);
+                                            const placeholder = isPlaceholderElective(codeKey);
+
+                                            // hover relations
+                                            const hoverIsPrereq =
+                                              !!hoveredCode && (prereqMap[hoveredCode]?.has(codeKey) ?? false);     // orange = this tile is a prereq of hovered course
+                                            const hoverIsDependent =
+                                              !!hoveredCode && (dependentsMap.get(hoveredCode)?.has(codeKey) ?? false); // purple = this tile depends on hovered course
+
+                                            const styleHighlight =
+                                                hoverIsPrereq
+                                                  ? { outline: "2px solid #f59e0b", backgroundColor: "#fff7ed" } // orange
+                                                  : hoverIsDependent
+                                                  ? { outline: "2px solid #a855f7", backgroundColor: "#faf5ff" } // purple
+                                                  : undefined;
+
+
+                                            return (
+                                              <div
+                                                key={`${sem.term}-${codeKey}`}
+                                                onMouseEnter={() => setHoveredCode(codeKey)}
+                                                onMouseLeave={() => setHoveredCode(null)}
+                                                style={styleHighlight}
+                                                className={[
+                                                  "flex items-center justify-between gap-2 rounded-md border px-2 py-1 text-xs",
+                                                  selected ? "bg-indigo-50 border-indigo-200" : "bg-white border-slate-200",
+                                                  // keep the classes—style fallback guarantees visibility even if Tailwind misses these
+                                                  hoverIsPrereq ? "ring-2 ring-[#f59e0b] bg-[#fff7ed]" : "",
+                                                  hoverIsDependent ? "ring-2 ring-[#a855f7] bg-[#faf5ff]" : "",
+                                                ].join(" ")}
+                                              >
+
+                                                <div className="min-w-0">
+                                                  <div className="truncate font-medium text-slate-800" title={`${codeKey} ${c.courseName}`}>
+                                                    {codeRaw.toUpperCase()} <span className="font-normal text-slate-700">{c.courseName}</span>
+                                                  </div>
+                                                  {placeholder && (
+                                                    <div className="text-[11px] text-slate-500">Choose from <em>Electives</em> below.</div>
+                                                  )}
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                  <span
+                                                    className={["inline-block h-2 w-2 rounded-full", offered ? "bg-emerald-500" : "bg-slate-300"].join(" ")}
+                                                    aria-label={offered ? "Offered" : "Not offered"}
+                                                  />
+                                                  <Button
+                                                    variant={selected ? "secondary" : "outline"}
+                                                    size="sm"
+                                                    className={["h-4 px-2 text-xs", !selectable ? "opacity-50 cursor-not-allowed pointer-events-none" : ""].join(" ")}
+                                                    disabled={!selectable}
+                                                    aria-disabled={!selectable}
+                                                    onClick={() => { if (!selectable) return; toggleSelectByCode(codeKey); }}
+                                                  >
+                                                    {selected ? "Remove" : "Select"}
+                                                  </Button>
+                                                </div>
                                               </div>
-                                              <div className="flex items-center gap-2">
-                                                <span className={["inline-block h-2 w-2 rounded-full", offered ? "bg-emerald-500" : "bg-slate-300"].join(" ")} aria-label={offered ? "Offered" : "Not offered"}/>
-                                                <Button
-                                                  variant={selected ? "secondary" : "outline"}
-                                                  size="sm"
-                                                  className={["h-7 px-2 text-xs", !selectable ? "opacity-50 cursor-not-allowed pointer-events-none" : ""].join(" ")}
-                                                  disabled={!selectable}
-                                                  aria-disabled={!selectable}
-                                                  onClick={() => { if (!selectable) return; toggleSelectByCode(code); }}
-                                                >{selected ? "Remove" : "Select"}</Button>
-                                              </div>
-                                            </div>
-                                          );
-                                        })}
+                                            );
+                                          })
+                                          }
                                       </div>
                                     </div>
                                   ))}
@@ -578,27 +661,62 @@ export default function CourseScheduler() {
                               <div className="text-sm font-semibold text-indigo-800">Electives (for Technical Elective I & II)</div>
                             </div>
                              <div className="grid gap-2 p-3" style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}>
-                              {electives.map((e) => {
-                                const code = (e.courseCode || "").toUpperCase();
-                                const info = codeToInfo.get(code);
+                             {electives.map((e) => {
+                                const codeRaw = e.courseCode || "";
+                                const codeKey = normalize(codeRaw);
+
+                                const info = codeToInfo.get(codeKey);
                                 const offered = !!info;
                                 const selectable = offered && (titleToSections.get(info!.title) || []).length > 0;
                                 const selected = offered && selectedTitles.includes(info!.title);
+
+                                const hoverIsPrereq =
+                                  !!hoveredCode && (prereqMap[hoveredCode]?.has(codeKey) ?? false);
+                                const hoverIsDependent =
+                                  !!hoveredCode && (dependentsMap.get(hoveredCode)?.has(codeKey) ?? false);
+
+                                const styleHighlight =
+                                      hoverIsPrereq
+                                        ? { outline: "2px solid #f59e0b", backgroundColor: "#fff7ed" }
+                                        : hoverIsDependent
+                                        ? { outline: "2px solid #a855f7", backgroundColor: "#faf5ff" }
+                                        : undefined;
+
+
                                 return (
-                                  <div key={code} className={["flex items-center justify-between gap-2 rounded-md border px-2 py-1 text-xs", selected ? "bg-indigo-50 border-indigo-200" : "bg-white border-slate-200"].join(" ")}>
+                                  <div
+                                      key={codeKey}
+                                      onMouseEnter={() => setHoveredCode(codeKey)}
+                                      onMouseLeave={() => setHoveredCode(null)}
+                                      style={styleHighlight}
+                                      className={[
+                                        "flex items-center justify-between gap-2 rounded-md border px-2 py-1 text-xs",
+                                        selected ? "bg-indigo-50 border-indigo-200" : "bg-white border-slate-200",
+                                        hoverIsPrereq ? "ring-2 ring-[#f59e0b] bg-[#fff7ed]" : "",
+                                        hoverIsDependent ? "ring-2 ring-[#a855f7] bg-[#faf5ff]" : "",
+                                      ].join(" ")}
+                                    >
+
                                     <div className="min-w-0">
-                                      <div className="truncate font-medium text-slate-800" title={`${code} ${e.courseName}`}>{code} <span className="font-normal text-slate-700">{e.courseName}</span></div>
+                                      <div className="truncate font-medium text-slate-800" title={`${codeKey} ${e.courseName}`}>
+                                        {codeRaw.toUpperCase()} <span className="font-normal text-slate-700">{e.courseName}</span>
+                                      </div>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                      <span className={["inline-block h-2 w-2 rounded-full", offered ? "bg-emerald-500" : "bg-slate-300"].join(" ")} aria-label={offered ? "Offered" : "Not offered"}/>
-                                     <Button
+                                      <span
+                                        className={["inline-block h-2 w-2 rounded-full", offered ? "bg-emerald-500" : "bg-slate-300"].join(" ")}
+                                        aria-label={offered ? "Offered" : "Not offered"}
+                                      />
+                                      <Button
                                         variant={selected ? "secondary" : "outline"}
                                         size="sm"
-                                        className={["h-7 px-2 text-xs", !selectable ? "opacity-50 cursor-not-allowed pointer-events-none" : ""].join(" ")}
+                                        className={["h-4 px-2 text-xs", !selectable ? "opacity-50 cursor-not-allowed pointer-events-none" : ""].join(" ")}
                                         disabled={!selectable}
                                         aria-disabled={!selectable}
-                                        onClick={() => { if (!selectable) return; toggleSelectByCode(code); }}
-                                      >{selected ? "Remove" : "Select"}</Button>
+                                        onClick={() => { if (!selectable) return; toggleSelectByCode(codeKey); }}
+                                      >
+                                        {selected ? "Remove" : "Select"}
+                                      </Button>
                                     </div>
                                   </div>
                                 );
