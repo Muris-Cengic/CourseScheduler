@@ -426,13 +426,13 @@ const indirectDependents = useMemo(() => {
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">ISET Course Scheduler</h1>
-          <p className="text-sm text-slate-700">Upload your dataset, pick titles, and generate a conflict-free schedule.</p>
+          <p className="text-sm text-slate-700">Upload available CRNs, select courses, and generate a conflict-free schedule.</p>
         </div>
         <div className="flex items-center gap-2">
           <input ref={fileInputRef} type="file" accept="application/json" className="hidden" onChange={handleFile} />
           <Button variant="default" onClick={() => fileInputRef.current?.click()}>
             <FileUp className="mr-2 h-4 w-4" />
-            Upload Sections JSON
+            Upload Sections as JSON
           </Button>
 
 
@@ -574,12 +574,13 @@ const indirectDependents = useMemo(() => {
 
                   {/* Legend */}
                   <div className="flex items-center gap-4 text-xs text-slate-600 mb-3">
-                    <div className="flex items-center gap-1"><span className="inline-block rounded-full" style={{ width: 8, height: 8, background: '#10b981' }} /> Offered in uploaded file</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-full" style={{ width: 8, height: 8, background: '#10b981' }} /> Offered</div>
                     <div className="flex items-center gap-1"><span className="inline-block rounded-full" style={{ width: 8, height: 8, background: '#cbd5e1' }} /> Not offered</div>
                     <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '1px solid #a5b4fc', background: '#eef2ff' }} /> Selected</div>
+                    <span>|| On Course Hover:</span>
                     <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px solid #f59e0b', background: '#fff7ed' }} /> Direct prerequisite</div>
-                    <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px dashed #f59e0b', background: '#fffbeb' }} /> Indirect prerequisite</div>
                     <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px solid #a855f7', background: '#faf5ff' }} /> Direct dependent</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px dashed #f59e0b', background: '#fffbeb' }} /> Indirect prerequisite</div>
                     <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px dashed #a855f7', background: '#faf5ff' }} /> Indirect dependent</div>
                   </div>
 
