@@ -35,7 +35,7 @@ interface CourseRecord {
 }
 
 // Study plans JSON (attached Study_Plans_2020.json)
-interface StudyPlanCourse { courseCode: string; courseName: string, prerequisites?: string[]; }
+interface StudyPlanCourse { courseCode: string; courseName: string; prerequisites?: string[] }
 interface StudyPlanSemester { term: number; desc: string; courses: StudyPlanCourse[] }
 interface StudyPlanYear { year: string; semesters: StudyPlanSemester[] }
 interface StudyPlan {
@@ -174,18 +174,6 @@ export default function CourseScheduler() {
     }
   };
 
-  useEffect(() => {
-    if (studyPlans.length === 0) loadPlansFromPublic();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // const handlePlanFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const f = e.target.files?.[0]; if (!f) return;
-  //   try { const text = await f.text(); ingestStudyPlans(JSON.parse(text)); }
-  //   catch (err: any) { setStatus(`Could not parse Study Plan JSON: ${err?.message ?? err}`); }
-  //   finally { e.target.value = ""; }
-  // };
-
   // Optionally try to auto-load ./Study_Plans_2020.json if present in public
   useEffect(() => {
     // best-effort silent attempt
@@ -244,44 +232,90 @@ export default function CourseScheduler() {
 // Active plan
 const activePlan = studyPlans[activePlanIndex];
 
-// course -> Set(prereqs) built from per-course "prerequisites" fields
+// course -> Set(prereqs) from plan's per-course "prerequisites"
 const prereqMap = useMemo(() => {
-  const out: Record<string, Set<string>> = {};
+  const out = new Map<string, Set<string>>();
   if (!activePlan) return out;
 
-  const addCourse = (code?: string, reqs?: string[]) => {
+  const add = (code?: string, reqs?: string[]) => {
     const key = normalize(code || "");
     if (!key) return;
-    if (!out[key]) out[key] = new Set<string>();
-    (reqs || []).forEach(r => out[key].add(normalize(r)));
+    if (!out.has(key)) out.set(key, new Set());
+    (reqs || []).forEach(r => out.get(key)!.add(normalize(r)));
   };
 
-  // yearly courses
   for (const yr of activePlan.yearlyCourses || []) {
     for (const sem of yr.semesters || []) {
-      for (const c of sem.courses || []) {
-        addCourse(c.courseCode, c.prerequisites);
-      }
+      for (const c of sem.courses || []) add(c.courseCode, c.prerequisites);
     }
   }
-  // electives may also carry prerequisites
-  for (const e of activePlan.technicalElectives || []) {
-    addCourse(e.courseCode, (e as any).prerequisites);
-  }
+  for (const e of activePlan.technicalElectives || []) add(e.courseCode, e.prerequisites);
   return out;
 }, [activePlan]);
 
-// course -> Set(dependents)  (invert prereqMap)
-const dependentsMap = useMemo(() => {
-  const dep = new Map<string, Set<string>>();
-  for (const [course, reqs] of Object.entries(prereqMap)) {
-    reqs.forEach((r) => {
-      if (!dep.has(r)) dep.set(r, new Set());
-      dep.get(r)!.add(course);
-    });
+// Inverted graph: course -> Set(courses that depend on it) (direct)
+const dependentsAdj = useMemo(() => {
+  const m = new Map<string, Set<string>>();
+  for (const [course, reqs] of prereqMap.entries()) {
+    for (const r of reqs) {
+      if (!m.has(r)) m.set(r, new Set());
+      m.get(r)!.add(course);
+    }
   }
-  return dep;
+  return m;
 }, [prereqMap]);
+
+// ----- Compute direct & indirect sets for current hover -----
+const directPrereqs = useMemo(() => {
+  if (!hoveredCode) return new Set<string>();
+  return new Set(prereqMap.get(hoveredCode) ?? []);
+}, [hoveredCode, prereqMap]);
+
+const allPrereqAncestors = useMemo(() => {
+  // Walk "prereq" edges up from the hovered course
+  const out = new Set<string>();
+  if (!hoveredCode) return out;
+  const stack = [...(prereqMap.get(hoveredCode) ?? [])];
+  while (stack.length) {
+    const cur = stack.pop()!;
+    if (out.has(cur)) continue;
+    out.add(cur);
+    for (const up of prereqMap.get(cur) ?? []) stack.push(up);
+  }
+  return out;
+}, [hoveredCode, prereqMap]);
+
+const indirectPrereqs = useMemo(() => {
+  const out = new Set<string>(allPrereqAncestors);
+  for (const d of directPrereqs) out.delete(d);
+  return out;
+}, [allPrereqAncestors, directPrereqs]);
+
+const directDependents = useMemo(() => {
+  if (!hoveredCode) return new Set<string>();
+  return new Set(dependentsAdj.get(hoveredCode) ?? []);
+}, [hoveredCode, dependentsAdj]);
+
+const allDependents = useMemo(() => {
+  // Walk "dependent" edges down from the hovered course
+  const out = new Set<string>();
+  if (!hoveredCode) return out;
+  const stack = [...(dependentsAdj.get(hoveredCode) ?? [])];
+  while (stack.length) {
+    const cur = stack.pop()!;
+    if (out.has(cur)) continue;
+    out.add(cur);
+    for (const nxt of dependentsAdj.get(cur) ?? []) stack.push(nxt);
+  }
+  return out;
+}, [hoveredCode, dependentsAdj]);
+
+const indirectDependents = useMemo(() => {
+  const out = new Set<string>(allDependents);
+  for (const d of directDependents) out.delete(d);
+  return out;
+}, [allDependents, directDependents]);
+
 
   const filteredTitles = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -405,11 +439,6 @@ const dependentsMap = useMemo(() => {
           <Button variant="secondary" onClick={loadPlansFromPublic}>
             Reload Study Plans
           </Button>
-          {/* <input ref={planFileInputRef} type="file" accept="application/json" className="hidden" onChange={handlePlanFile} />
-          <Button variant="secondary" onClick={() => planFileInputRef.current?.click()}>
-            <FileUp className="mr-2 h-4 w-4" />
-            Upload Study Plans
-          </Button> */}
         </div>
       </div>
 
@@ -466,7 +495,6 @@ const dependentsMap = useMemo(() => {
                     onKeyDown={(e) => { if (e.key === 'Enter') generateSchedule(); }}
                   />
                 </div>
-                {/* <Button onClick={generateSchedule}><CalendarDays className="mr-2 h-4 w-4" />Generate timetable</Button> */}
               </div>
 
               {/* Titles list */}
@@ -520,8 +548,7 @@ const dependentsMap = useMemo(() => {
             <div className="space-y-4">
               {studyPlans.length === 0 && (
                 <div className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
-                  Place <strong>Study_Plans_2020.json</strong> in <code>/public</code>
-                  It will auto-load on refresh. If you just updated it, click <em>Reload Study Plans</em> above.
+                  Place <strong>Study_Plans_2020.json</strong> in <code>/public</code>. It will auto-load on refresh. If you just updated it, click <em>Reload Study Plans</em> above.
                 </div>
               )}
 
@@ -547,11 +574,13 @@ const dependentsMap = useMemo(() => {
 
                   {/* Legend */}
                   <div className="flex items-center gap-4 text-xs text-slate-600 mb-3">
-                    <div className="flex items-center gap-1"><span className="inline-block h-2 w-2 rounded-full bg-emerald-500"/> Offered in uploaded file</div>
-                    <div className="flex items-center gap-1"><span className="inline-block h-2 w-2 rounded-full bg-slate-300"/> Not in dataset</div>
-                    <div className="flex items-center gap-1"><span className="inline-block h-3 w-3 rounded-sm border border-indigo-300 bg-indigo-50"/> Selected</div>
-                    <div className="flex items-center gap-1"><span className="inline-block h-3 w-3 rounded-sm ring-2 ring-[#f59e0b] bg-[#fff7ed]" />Prerequisite (hover)</div>
-                    <div className="flex items-center gap-1"><span className="inline-block h-3 w-3 rounded-sm ring-2 ring-[#a855f7] bg-[#faf5ff]" />Dependent (hover)</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-full" style={{ width: 8, height: 8, background: '#10b981' }} /> Offered in uploaded file</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-full" style={{ width: 8, height: 8, background: '#cbd5e1' }} /> Not offered</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '1px solid #a5b4fc', background: '#eef2ff' }} /> Selected</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px solid #f59e0b', background: '#fff7ed' }} /> Direct prerequisite</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px dashed #f59e0b', background: '#fffbeb' }} /> Indirect prerequisite</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px solid #a855f7', background: '#faf5ff' }} /> Direct dependent</div>
+                    <div className="flex items-center gap-1"><span className="inline-block rounded-sm" style={{ width: 12, height: 12, border: '2px dashed #a855f7', background: '#faf5ff' }} /> Indirect dependent</div>
                   </div>
 
                   {/* Plan content */}
@@ -579,47 +608,56 @@ const dependentsMap = useMemo(() => {
                                       <div className="px-2 py-1.5 text-sm font-semibold text-slate-800 bg-white border-b border-slate-200">{sem.desc}</div>
                                       <div className="p-0 space-y-1">
                                         {(sem.courses || []).map((c) => {
-                                            const codeRaw = c.courseCode || "";
-                                            const codeKey = normalize(codeRaw); // normalized for lookups
+                                            const code = (c.courseCode || "").toUpperCase();      // for display
+                                            const codeKey = normalize(code);                       // for lookups
 
                                             const info = codeToInfo.get(codeKey);
-                                            const offered = !!info; // present in uploaded JSON
+                                            const offered = !!info;
                                             const selectable = offered && (titleToSections.get(info!.title) || []).length > 0;
                                             const selected = offered && selectedTitles.includes(info!.title);
                                             const placeholder = isPlaceholderElective(codeKey);
 
-                                            // hover relations
-                                            const hoverIsPrereq =
-                                              !!hoveredCode && (prereqMap[hoveredCode]?.has(codeKey) ?? false);     // orange = this tile is a prereq of hovered course
-                                            const hoverIsDependent =
-                                              !!hoveredCode && (dependentsMap.get(hoveredCode)?.has(codeKey) ?? false); // purple = this tile depends on hovered course
+                                            // --- hover relations (direct vs indirect) ---
+                                            const isDirectPrereq     = !!hoveredCode && directPrereqs.has(codeKey);
+                                            const isIndirectPrereq   = !!hoveredCode && indirectPrereqs.has(codeKey);
+                                            const isDirectDependent  = !!hoveredCode && directDependents.has(codeKey);
+                                            const isIndirectDependent= !!hoveredCode && indirectDependents.has(codeKey);
 
+                                            // --- inline fallback styles (work even if Tailwind fails) ---
                                             const styleHighlight =
-                                                hoverIsPrereq
-                                                  ? { outline: "2px solid #f59e0b", backgroundColor: "#fff7ed" } // orange
-                                                  : hoverIsDependent
-                                                  ? { outline: "2px solid #a855f7", backgroundColor: "#faf5ff" } // purple
-                                                  : undefined;
+                                              isDirectPrereq
+                                                ? { outline: "2px solid #f59e0b", backgroundColor: "#fff7ed" } // bright orange (direct prereq)
+                                              : isIndirectPrereq
+                                                ? { outline: "2px dashed #fcd34d", backgroundColor: "#fffbeb" } // lighter orange (indirect)
+                                              : isDirectDependent
+                                                ? { outline: "2px solid #a855f7", backgroundColor: "#faf5ff" } // bright purple (direct dependent)
+                                              : isIndirectDependent
+                                                ? { outline: "2px dashed #d8b4fe", backgroundColor: "#faf5ff" } // lighter purple (indirect)
+                                              : undefined;
+
 
 
                                             return (
                                               <div
-                                                key={`${sem.term}-${codeKey}`}
+                                                key={`${sem.term}-${code}`}
                                                 onMouseEnter={() => setHoveredCode(codeKey)}
                                                 onMouseLeave={() => setHoveredCode(null)}
                                                 style={styleHighlight}
                                                 className={[
-                                                  "flex items-center justify-between gap-2 rounded-md border px-2 py-1 text-xs",
+                                                  "flex items-center justify-between gap-2 rounded-md border px-2 py-0.5 text-xs",
                                                   selected ? "bg-indigo-50 border-indigo-200" : "bg-white border-slate-200",
-                                                  // keep the classes—style fallback guarantees visibility even if Tailwind misses these
-                                                  hoverIsPrereq ? "ring-2 ring-[#f59e0b] bg-[#fff7ed]" : "",
-                                                  hoverIsDependent ? "ring-2 ring-[#a855f7] bg-[#faf5ff]" : "",
+                                                  // keep utility classes too; fallback styles ensure visibility if they don't compile
+                                                  isDirectPrereq    ? "ring-2 ring-[#f59e0b] bg-[#fff7ed]" : "",
+                                                  isIndirectPrereq  ? "ring-2 ring-[#fcd34d] bg-[#fffbeb]" : "",
+                                                  isDirectDependent ? "ring-2 ring-[#a855f7] bg-[#faf5ff]" : "",
+                                                  isIndirectDependent ? "ring-2 ring-[#d8b4fe] bg-[#faf5ff]" : "",
                                                 ].join(" ")}
                                               >
 
+
                                                 <div className="min-w-0">
                                                   <div className="truncate font-medium text-slate-800" title={`${codeKey} ${c.courseName}`}>
-                                                    {codeRaw.toUpperCase()} <span className="font-normal text-slate-700">{c.courseName}</span>
+                                                    {code.toUpperCase()} <span className="font-normal text-slate-700">{c.courseName}</span>
                                                   </div>
                                                   {placeholder && (
                                                     <div className="text-[11px] text-slate-500">Choose from <em>Electives</em> below.</div>
@@ -656,50 +694,57 @@ const dependentsMap = useMemo(() => {
 
                         {/* Electives list (replaces NCSxxxx Technical Elective I & II) */}
                         {electives.length > 0 && (
-                          <div className="rounded-md border border-indigo-200">
+                          <div className="rounded-md border border-indigo-200 mt-4">
                             <div className="flex items-center justify-between px-3 py-1 bg-indigo-50">
                               <div className="text-sm font-semibold text-indigo-800">Electives (for Technical Elective I & II)</div>
                             </div>
                              <div className="grid gap-2 p-3" style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}>
                              {electives.map((e) => {
-                                const codeRaw = e.courseCode || "";
-                                const codeKey = normalize(codeRaw);
-
+                                const code = (e.courseCode || "").toUpperCase();
+                                const codeKey = normalize(code);
                                 const info = codeToInfo.get(codeKey);
                                 const offered = !!info;
                                 const selectable = offered && (titleToSections.get(info!.title) || []).length > 0;
                                 const selected = offered && selectedTitles.includes(info!.title);
 
-                                const hoverIsPrereq =
-                                  !!hoveredCode && (prereqMap[hoveredCode]?.has(codeKey) ?? false);
-                                const hoverIsDependent =
-                                  !!hoveredCode && (dependentsMap.get(hoveredCode)?.has(codeKey) ?? false);
+                                const isDirectPrereq      = !!hoveredCode && directPrereqs.has(codeKey);
+                                const isIndirectPrereq    = !!hoveredCode && indirectPrereqs.has(codeKey);
+                                const isDirectDependent   = !!hoveredCode && directDependents.has(codeKey);
+                                const isIndirectDependent = !!hoveredCode && indirectDependents.has(codeKey);
 
                                 const styleHighlight =
-                                      hoverIsPrereq
-                                        ? { outline: "2px solid #f59e0b", backgroundColor: "#fff7ed" }
-                                        : hoverIsDependent
-                                        ? { outline: "2px solid #a855f7", backgroundColor: "#faf5ff" }
-                                        : undefined;
+                                  isDirectPrereq 
+                                    ? { outline: "2px solid #f59e0b", backgroundColor: "#fff7ed" }
+                                  : isIndirectPrereq
+                                    ? { outline: "2px dashed #fcd34d", backgroundColor: "#fffbeb" }
+                                  : isDirectDependent
+                                    ? { outline: "2px solid #a855f7", backgroundColor: "#faf5ff" }
+                                  : isIndirectDependent
+                                    ? { outline: "2px dashed #d8b4fe", backgroundColor: "#faf5ff" }
+                                  : undefined;
+
 
 
                                 return (
                                   <div
-                                      key={codeKey}
-                                      onMouseEnter={() => setHoveredCode(codeKey)}
-                                      onMouseLeave={() => setHoveredCode(null)}
-                                      style={styleHighlight}
-                                      className={[
-                                        "flex items-center justify-between gap-2 rounded-md border px-2 py-1 text-xs",
-                                        selected ? "bg-indigo-50 border-indigo-200" : "bg-white border-slate-200",
-                                        hoverIsPrereq ? "ring-2 ring-[#f59e0b] bg-[#fff7ed]" : "",
-                                        hoverIsDependent ? "ring-2 ring-[#a855f7] bg-[#faf5ff]" : "",
-                                      ].join(" ")}
-                                    >
+                                    key={code}
+                                    onMouseEnter={() => setHoveredCode(codeKey)}
+                                    onMouseLeave={() => setHoveredCode(null)}
+                                    style={styleHighlight}
+                                    className={[
+                                      "flex items-center justify-between gap-2 rounded-md border px-2 py-1 text-xs",
+                                      selected ? "bg-indigo-50 border-indigo-200" : "bg-white border-slate-200",
+                                      isDirectPrereq    ? "ring-2 ring-[#f59e0b] bg-[#fff7ed]" : "",
+                                      isIndirectPrereq  ? "ring-2 ring-[#fcd34d] bg-[#fffbeb]" : "",
+                                      isDirectDependent ? "ring-2 ring-[#a855f7] bg-[#faf5ff]" : "",
+                                      isIndirectDependent ? "ring-2 ring-[#d8b4fe] bg-[#faf5ff]" : "",
+                                    ].join(" ")}
+                                  >
+
 
                                     <div className="min-w-0">
                                       <div className="truncate font-medium text-slate-800" title={`${codeKey} ${e.courseName}`}>
-                                        {codeRaw.toUpperCase()} <span className="font-normal text-slate-700">{e.courseName}</span>
+                                        {code.toUpperCase()} <span className="font-normal text-slate-700">{e.courseName}</span>
                                       </div>
                                     </div>
                                     <div className="flex items-center gap-2">
