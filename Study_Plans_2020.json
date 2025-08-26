@@ -1,0 +1,3364 @@
+{
+  "studyPlans": [
+    {
+      "specialization": "NCS",
+      "degree": "AB",
+      "degreeDesc": "Applied Bachelor",
+      "year": 2020,
+      "totalCreditHours": 142,
+      "yearlyCourses": [
+        {
+          "year": "First Year",
+          "semesters": [
+            {
+              "term": 1,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "MATH1001",
+                  "courseName": "Precalculus (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": [ "PHYS1011", "PHYS1011" ]
+                },
+                {
+                  "courseCode": "ICT1011",
+                  "courseName": "Introduction to Programming & Problem Solving (W.B.)",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1001",
+                  "courseName": "English Skills",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 0,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1011",
+                  "courseName": "Islamic Culture (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1012",
+                  "courseName": "Emirates Society & Culture (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "PHYS1011",
+                  "courseName": "Physics I (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "MATH1001"
+                  ],
+                  "corequisites": [ "MATH1001" ]
+                },
+                {
+                  "courseCode": "PHYS1012",
+                  "courseName": "Physics I Lab",
+                  "lectureHours": 0,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "PHYS1011"
+                  ],
+                  "corequisites": [ "MATH1001" ]
+                }
+              ]
+            },
+            {
+              "term": 2,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT1201",
+                  "courseName": "Object Oriented Programming in Java",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1011"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT1202",
+                  "courseName": "Intro to Computer Networks",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1011"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "MATH1010",
+                  "courseName": "Calculus I (W.B.)",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "MATH1001"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1011",
+                  "courseName": "Academic English 1",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENG1011",
+                  "courseName": "Intro to Computer Systems",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "PHYS1011",
+                    "PHYS1012"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 3,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "ICT1301",
+                  "courseName": "Fundamentals of Information Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1202"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1012",
+                  "courseName": "Academic English 2",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ENGL1011"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Second Year",
+          "semesters": [
+            {
+              "term": 4,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2101",
+                  "courseName": "Discrete Mathematics",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "MATH1010"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2101",
+                  "courseName": "Network Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1202"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2102",
+                  "courseName": "Intro to Database Systems",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1201"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2011",
+                  "courseName": "Public Speaking (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2012",
+                  "courseName": "Literature Review (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2013",
+                  "courseName": "Report Writing (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2103",
+                  "courseName": "Logic Design & Computer Organization",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ENG1011"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 5,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2201",
+                  "courseName": "Data Structure and Algorithms",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1201",
+                    "ICT2101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2202",
+                  "courseName": "Operating Systems Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT2103",
+                    "ICT1301"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2201",
+                  "courseName": "Web Programming and Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1301",
+                    "ICT2102"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2201",
+                  "courseName": "Ethical Hacking and Pen. Testing",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET2201",
+                  "courseName": "Applied Cryptography",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2203",
+                  "courseName": "Introduction to Software Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1201",
+                    "ICT1301"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 6,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "NCS2301",
+                  "courseName": "Routing and Switching - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "ICT1202"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2302",
+                  "courseName": "Secure Network Design - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2303",
+                  "courseName": "Network Security - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2304",
+                  "courseName": "Ethical Hacking and Pen. Testing - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS2201"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2305",
+                  "courseName": "Web and Database Security- OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2306",
+                  "courseName": "Penetration Testing in-Depth - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS2201"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Third Year",
+          "semesters": [
+            {
+              "term": 7,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "NCS3101",
+                  "courseName": "Fundamentals of Storage Networking",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ICT1202"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3102",
+                  "courseName": "Wireless Network Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3103",
+                  "courseName": "Security Protocols in-depth",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2101",
+                    "NCS2306"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3104",
+                  "courseName": "Cloud Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET3101",
+                  "courseName": "InfoSec Project Management (Blended L.)",
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 8,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "NCS3201",
+                  "courseName": "Perimeter Protection",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2306"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3201",
+                  "courseName": "Malware Analysis: Tools and Techniques",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2304",
+                    "SSD2201"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3202",
+                  "courseName": "Adv Pen Testing & Ethical Hacking",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2306"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "MATH2012",
+                  "courseName": "Probability and Statistics",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "MATH1010"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3203",
+                  "courseName": "Fundamentals of Digital Forensics",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 9,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "NCS3301",
+                  "courseName": "Linux/Unix Security Administration (OCT-II)",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "ICT2202"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3302",
+                  "courseName": "Server Security Administration - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "ICT2202"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3303",
+                  "courseName": "Advanced Routing and Switching - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS2301"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3304",
+                  "courseName": "Network Perimeter Protection - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS3201"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3305",
+                  "courseName": "Intrusion Detection & Response - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS3201"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3306",
+                  "courseName": "Digital Forensics and Investigation - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [
+                    "NCS3203"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Fourth Year",
+          "semesters": [
+            {
+              "term": 10,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "HUM2011",
+                  "courseName": "Psychology",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1013",
+                  "courseName": "Arabic Communication Skills (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET4101",
+                  "courseName": "Risk and Security Management",
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS4101",
+                  "courseName": "Graduation Project I",
+                  "lectureHours": 1,
+                  "labHours": 4,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "See Notes below"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCSxxxx",
+                  "courseName": "Technical Elective I",
+                  "lectureHours": 0,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 0,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "See Major NCS Table"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 11,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ISET4201",
+                  "courseName": "Incident Handling and Response",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ISET4101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM3011",
+                  "courseName": "Creativity, Innovation and Entrepreneurship",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 3,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "ENGL2013",
+                    "or completion of 60 credit"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET4202",
+                  "courseName": "Ethics, Law & Policy in Cyberspace (Blended L.)",
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS4201",
+                  "courseName": "Graduation Project II",
+                  "lectureHours": 1,
+                  "labHours": 4,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "NCS4101"
+                  ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCSxxxx",
+                  "courseName": "Technical Elective II",
+                  "lectureHours": 0,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 0,
+                  "creditHours": 3,
+                  "prerequisites": [
+                    "See Major NCS Table"
+                  ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 12,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "NCS4301",
+                  "courseName": "On Job Training (Internship)",
+                  "lectureHours": 0,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 0,
+                  "creditHours": 6,
+                  "prerequisites": [
+                    ""
+                  ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "technicalElectives": [
+        {
+          "courseCode": "ISET4001",
+          "courseName": "Homeland Security",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "NCS2201" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "ISET4002",
+          "courseName": "Advanced Cryptography",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "ISET2201" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "ISET4003",
+          "courseName": "Security Governance & Compliance",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "ICT1301" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "ISET4004",
+          "courseName": "Security Architectures & Models",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "ICT1301" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "ISET4005",
+          "courseName": "Privacy in a Networked World",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "ICT1301" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "ISET4006",
+          "courseName": "BlockChain Technology & Security",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "ISET2201" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "NCS4001",
+          "courseName": "Hardware Based Security",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "ICT1301" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "NCS4002",
+          "courseName": "Wireless Ethical Hacking & Defense",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "NCS3102" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "NCS4003",
+          "courseName": "Network Security Trends",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "NCS3201" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "NCS4004",
+          "courseName": "Advanced Network Security",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "NCS2101" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "SSD4002",
+          "courseName": "Reverse Engineering",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "SSD3201" ],
+          "corequisites": []
+        },
+        {
+          "courseCode": "SSD4005",
+          "courseName": "Advanced Web Security",
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3,
+          "prerequisites": [ "SSD2201" ],
+          "corequisites": []
+        }
+      ]
+    },
+    {
+      "specialization": "SSD",
+      "degree": "AB",
+      "degreeDesc": "Applied Bachelor",
+      "year": 2020,
+      "totalCreditHours": 142,
+      "yearlyCourses": [
+        {
+          "year": "First Year",
+          "semesters": [
+            {
+              "term": 1,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "MATH1001",
+                  "courseName": "Precalculus (W.B.)",
+                  "description": "Math and Sciences",
+                  "prerequisites": [],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": [ "PHYS1011", "PHYS1012" ]
+                },
+                {
+                  "courseCode": "ICT1011",
+                  "courseName": "Introduction to Programming & Problem Solving (W.B.)",
+                  "description": "Engineering Technology",
+                  "prerequisites": [],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1001",
+                  "courseName": "English Skills",
+                  "description": "Humanities",
+                  "prerequisites": [],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 0,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1011",
+                  "courseName": "Islamic Culture (W.B.)",
+                  "description": "Humanities",
+                  "prerequisites": [],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1012",
+                  "courseName": "Emirates Society & Culture (W.B.)",
+                  "description": "Humanities",
+                  "prerequisites": [],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "PHYS1011",
+                  "courseName": "Physics I (W.B.)",
+                  "description": "Math and Sciences",
+                  "prerequisites": [
+                    "MATH1001"
+                  ],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": [ "MATH1001" ]
+                },
+                {
+                  "courseCode": "PHYS1012",
+                  "courseName": "Physics I Lab",
+                  "description": "Math and Sciences",
+                  "prerequisites": [
+                    "PHYS1011"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 1,
+                  "corequisites": [ "MATH1001" ]
+                }
+              ]
+            },
+            {
+              "term": 2,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT1201",
+                  "courseName": "Object Oriented Programming in Java",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1011"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT1202",
+                  "courseName": "Intro to Computer Networks",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1011"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "MATH1010",
+                  "courseName": "Calculus I (W.B.)",
+                  "description": "Math and Sciences",
+                  "prerequisites": [
+                    "MATH1001"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1011",
+                  "courseName": "Academic English 1",
+                  "description": "Humanities",
+                  "prerequisites": [],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENG1011",
+                  "courseName": "Intro to Computer Systems",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "PHYS1011",
+                    "PHYS1012"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 3,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "ICT1301",
+                  "courseName": "Fundamentals of Information Security",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1202"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1012",
+                  "courseName": "Academic English 2",
+                  "description": "Humanities",
+                  "prerequisites": [
+                    "ENGL1011"
+                  ],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Second Year",
+          "semesters": [
+            {
+              "term": 4,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2101",
+                  "courseName": "Discrete Mathematics",
+                  "description": "Math and Sciences",
+                  "prerequisites": [
+                    "MATH1010"
+                  ],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2101",
+                  "courseName": "Network Security",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1202"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2102",
+                  "courseName": "Intro to Database Systems",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1201"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2011",
+                  "courseName": "Public Speaking (Blended L.)",
+                  "description": "Humanities",
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2012",
+                  "courseName": "Literature Review (Blended L.)",
+                  "description": "Humanities",
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2013",
+                  "courseName": "Report Writing (Blended L.)",
+                  "description": "Humanities",
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2103",
+                  "courseName": "Logic Design & Computer Organization",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ENG1011"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 5,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2201",
+                  "courseName": "Data Structure and Algorithms",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1201",
+                    "ICT2101"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2202",
+                  "courseName": "Operating Systems Security",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT2103",
+                    "ICT1301"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2201",
+                  "courseName": "Web Programming and Security",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1301",
+                    "ICT2102"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2201",
+                  "courseName": "Ethical Hacking and Pen. Testing",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET2201",
+                  "courseName": "Applied Cryptography",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2203",
+                  "courseName": "Introduction to Software Security",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1201",
+                    "ICT1301"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 6,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "SSD2301",
+                  "courseName": "Secure Web Applications Development - OCT I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD2201"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2302",
+                  "courseName": "Secure Software Design & Implementation - OCT I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT2203"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2303",
+                  "courseName": "Web Application Security - OCT I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD2201"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2304",
+                  "courseName": "Ethical Hacking and Pen. Testing - OCT I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "NCS2201"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2305",
+                  "courseName": "Secure Windows/Linux OS - OCT I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT2202"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2306",
+                  "courseName": "Client/Server Security Admin - OCT I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT2202"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Third Year",
+          "semesters": [
+            {
+              "term": 7,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "SSD3101",
+                  "courseName": "Object Oriented Analysis and Design",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT2203"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3102",
+                  "courseName": "Mobile Programming and Security",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1201",
+                    "ICT1301"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3104",
+                  "courseName": "Embedded Systems Secure Development",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1201",
+                    "ICT2103"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3104",
+                  "courseName": "Cloud Security",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET3101",
+                  "courseName": "InfoSec Project Management (Blended L.)",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 8,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "SSD3201",
+                  "courseName": "Malware Analysis: Tools and Techniques",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD2304",
+                    "SSD2201"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3202",
+                  "courseName": "Multi-Language Secure Coding and Testing",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD3101"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3203",
+                  "courseName": "Secure Database Development",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT2102"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "MATH2012",
+                  "courseName": "Probability and Statistics",
+                  "description": "Math and Sciences",
+                  "prerequisites": [
+                    "MATH1001"
+                  ],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3203",
+                  "courseName": "Fundamentals of Digital Forensics",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 9,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "SSD3301",
+                  "courseName": "Software Verification and Validation - OCT II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD3101"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3302",
+                  "courseName": "Database Programming and Security - OCT II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD3203"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3303",
+                  "courseName": "Software Vulnerability Assessment - OCT II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD3202"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3304",
+                  "courseName": "Practical Requirements Engineering - OCT II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT2203"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3305",
+                  "courseName": "Secure Mobile Applications Development - OCT II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD3102"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3306",
+                  "courseName": "Digital Forensics and Investigation - OCT II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "NCS3203"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Fourth Year",
+          "semesters": [
+            {
+              "term": 10,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "HUM2011",
+                  "courseName": "Psychology",
+                  "description": "Humanities",
+                  "prerequisites": [
+                    "ENGL1012"
+                  ],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1013",
+                  "courseName": "Arabic Communication Skills (W.B.)",
+                  "description": "Humanities",
+                  "prerequisites": [],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET4101",
+                  "courseName": "Risk and Security Management",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD4101",
+                  "courseName": "Graduation Project I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "See Notes Below"
+                  ],
+                  "lectureHours": 1,
+                  "labHours": 4,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSDxxxx",
+                  "courseName": "Technical Elective I",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "See Major SSD Table"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 0,
+                  "creditHours": 3,
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 11,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ISET4201",
+                  "courseName": "Incident Handling and Response",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ISET4101"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM3011",
+                  "courseName": "Creativity, Innovation and Entrepreneurship",
+                  "description": "Humanities",
+                  "prerequisites": [
+                    "ENGL2013",
+                    "or completion of 60 credits"
+                  ],
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 3,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET4202",
+                  "courseName": "Ethics, Law & Policy in Cyberspace (Blended L.)",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "ICT1301"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD4201",
+                  "courseName": "Graduation Project II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "SSD4101"
+                  ],
+                  "lectureHours": 1,
+                  "labHours": 4,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSDxxxx",
+                  "courseName": "Technical Elective II",
+                  "description": "Engineering Technology",
+                  "prerequisites": [
+                    "See Major SSD Table"
+                  ],
+                  "lectureHours": 0,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 0,
+                  "creditHours": 3,
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 12,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "SSD4301",
+                  "courseName": "On Job Training (Internship)",
+                  "description": "Engineering Technology",
+                  "prerequisites": [],
+                  "lectureHours": 0,
+                  "labHours": 1,
+                  "tutorialHours": 0,
+                  "contactHours": 0,
+                  "creditHours": 6,
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "technicalElectives": [
+        {
+          "courseCode": "ISET4001",
+          "courseName": "Homeland Security",
+          "prerequisites": [
+            "NCS2201"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "ISET4002",
+          "courseName": "Advanced Cryptography",
+          "prerequisites": [
+            "ISET2201"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "ISET4003",
+          "courseName": "Security Governance & Compliance",
+          "prerequisites": [
+            "ICT1301"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "ISET4004",
+          "courseName": "Security Architectures & Models",
+          "prerequisites": [
+            "ICT1301"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "ISET4005",
+          "courseName": "Privacy in a Networked World",
+          "prerequisites": [
+            "ICT1301"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "ISET4006",
+          "courseName": "Blockchain Technology & Security",
+          "prerequisites": [
+            "ISET2201"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "NCS4001",
+          "courseName": "Hardware Based Security",
+          "prerequisites": [
+            "ICT1301"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "NCS4004",
+          "courseName": "Advanced Network Security",
+          "prerequisites": [
+            "NCS2101"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "SSD4001",
+          "courseName": "Data Artificial Intelligence",
+          "prerequisites": [
+            "SSD3101"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "SSD4002",
+          "courseName": "Reverse Engineering",
+          "prerequisites": [
+            "SSD3201"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "SSD4003",
+          "courseName": "Software Security Trends",
+          "prerequisites": [
+            "SSD3202"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "SSD4004",
+          "courseName": "Human Computer Interaction Design",
+          "prerequisites": [
+            "SSD3305"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "SSD4005",
+          "courseName": "Advanced Web Security",
+          "prerequisites": [
+            "SSD2201"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "SSD4006",
+          "courseName": "Critical Software Security Concepts & Standards",
+          "prerequisites": [
+            "SSD3101"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        },
+        {
+          "courseCode": "SSD4007",
+          "courseName": "Advanced Mobile Application Development",
+          "prerequisites": [
+            "SSD3102"
+          ],
+          "corequisites": [],
+          "lectureHours": 2,
+          "labHours": 2,
+          "tutorialHours": 0,
+          "creditHours": 3
+        }
+      ]
+    },
+    {
+      "specialization": "NCS",
+      "degree": "HD",
+      "degreeDesc": "Higher Diploma",
+      "year": 2020,
+      "totalCreditHours": 111,
+      "yearlyCourses": [
+        {
+          "year": "First Year",
+          "semesters": [
+            {
+              "term": 1,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "MATH1001",
+                  "courseName": "Precalculus (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": [ "PHYS1011", "PHYS1012" ]
+                },
+                {
+                  "courseCode": "ICT1011",
+                  "courseName": "Introduction to Programming & Problem Solving (W.B.)",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1001",
+                  "courseName": "English Skills",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 0,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1011",
+                  "courseName": "Islamic Culture (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1012",
+                  "courseName": "Emirates Society & Culture (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "PHYS1011",
+                  "courseName": "Physics I (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "MATH1001" ],
+                  "corequisites": [ "MATH1001" ]
+                },
+                {
+                  "courseCode": "PHYS1012",
+                  "courseName": "Physics I Lab",
+                  "lectureHours": 0,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 1,
+                  "prerequisites": [ "PHYS1011" ],
+                  "corequisites": [ "MATH1001" ]
+                }
+              ]
+            },
+            {
+              "term": 2,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT1201",
+                  "courseName": "Object Oriented Programming in Java",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1011" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT1202",
+                  "courseName": "Intro to Computer Networks",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1011" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "MATH1010",
+                  "courseName": "Calculus I (W.B.)",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [ "MATH1001" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1011",
+                  "courseName": "Academic English 1",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENG1011",
+                  "courseName": "Intro to Computer Systems",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [ "PHYS1011", "PHYS1012" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 3,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "ICT1301",
+                  "courseName": "Fundamentals of Information Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1012",
+                  "courseName": "Academic English 2",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ENGL1011" ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Second Year",
+          "semesters": [
+            {
+              "term": 4,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2101",
+                  "courseName": "Discrete Mathematics",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "MATH1010" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2101",
+                  "courseName": "Network Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2102",
+                  "courseName": "Intro to Database Systems",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2011",
+                  "courseName": "Public Speaking (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [ "ENGL1012" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2012",
+                  "courseName": "Literature Review (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [ "ENGL1012" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2013",
+                  "courseName": "Report Writing (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [ "ENGL1012" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2103",
+                  "courseName": "Logic Design & Computer Organization",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ENG1011" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 5,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2201",
+                  "courseName": "Data Structure and Algorithms",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201", "ICT2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2202",
+                  "courseName": "Operating Systems Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT2103", "ICT1301" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2201",
+                  "courseName": "Web Programming and Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1301", "ICT2102" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2201",
+                  "courseName": "Ethical Hacking and Penetration Testing",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET2201",
+                  "courseName": "Applied Cryptography",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1301" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2203",
+                  "courseName": "Introduction to Software Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201", "ICT1301" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 6,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "NCS2301",
+                  "courseName": "Routing and Switching - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "ICT1202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2302",
+                  "courseName": "Secure Network Design - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2303",
+                  "courseName": "Network Security - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2304",
+                  "courseName": "Ethical Hacking and Penetration Testing - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS2201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2305",
+                  "courseName": "Web and Database Security - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2306",
+                  "courseName": "Penetration Testing in-Depth - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS2201" ],
+                  "corequisites": []
+                }
+              ]
+            }
+
+          ]
+        },
+
+        {
+          "year": "Third Year",
+          "semesters": [
+            {
+              "term": 7,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "NCS3101",
+                  "courseName": "Fundamentals of Storage Networking",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3102",
+                  "courseName": "Wireless Network Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3103",
+                  "courseName": "Security Protocols in-depth",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2101", "NCS2306" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3104",
+                  "courseName": "Cloud Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET3101",
+                  "courseName": "InfoSec Project Management (Blended L.)",
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "prerequisites": [ "ICT1301" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 8,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "NCS3201",
+                  "courseName": "Perimeter Protection",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2306" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3201",
+                  "courseName": "Malware Analysis: Tools and Techniques",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2304", "SSD2201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS4003",
+                  "courseName": "Emerging Trends in Network Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS3104", "OR_NCS3201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3203",
+                  "courseName": "Fundamentals of Digital Forensics",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3205",
+                  "courseName": "Capstone Project",
+                  "lectureHours": 1,
+                  "labHours": 4,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 9,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "NCS3301",
+                  "courseName": "Linux/Unix Security Administration (OCT II)",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "ICT2202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3302",
+                  "courseName": "Server Security Administration - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "ICT2202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3303",
+                  "courseName": "Advanced Routing and Switching - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS2301" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3304",
+                  "courseName": "Network Perimeter Protection - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS3201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3305",
+                  "courseName": "Intrusion Detection and Response - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS3201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3306",
+                  "courseName": "Digital Forensics and Investigation - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS3203" ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        }
+
+      ],
+      "technicalElectives": [
+
+      ]
+    },
+
+    {
+      "specialization": "SSD",
+      "degree": "HD",
+      "degreeDesc": "Higher Diploma",
+      "year": 2020,
+      "totalCreditHours": 111,
+      "yearlyCourses": [
+        {
+          "year": "First Year",
+          "semesters": [
+            {
+              "term": 1,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "MATH1001",
+                  "courseName": "Precalculus (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": [ "PHYS1011", "PHYS1012" ]
+                },
+                {
+                  "courseCode": "ICT1011",
+                  "courseName": "Introduction to Programming & Problem Solving (W.B.)",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1001",
+                  "courseName": "English Skills",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 0,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1011",
+                  "courseName": "Islamic Culture (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "HUM1012",
+                  "courseName": "Emirates Society & Culture (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "PHYS1011",
+                  "courseName": "Physics I (W.B.)",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "MATH1001" ],
+                  "corequisites": [ "MATH1001" ]
+                },
+                {
+                  "courseCode": "PHYS1012",
+                  "courseName": "Physics I Lab",
+                  "lectureHours": 0,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 1,
+                  "prerequisites": [ "PHYS1011" ],
+                  "corequisites": [ "MATH1001" ]
+                }
+              ]
+            },
+            {
+              "term": 2,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT1201",
+                  "courseName": "Object Oriented Programming in Java",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1011" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT1202",
+                  "courseName": "Intro to Computer Networks",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1011" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "MATH1010",
+                  "courseName": "Calculus I (W.B.)",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [ "MATH1001" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1011",
+                  "courseName": "Academic English 1",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENG1011",
+                  "courseName": "Intro to Computer Systems",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 2,
+                  "contactHours": 6,
+                  "creditHours": 3,
+                  "prerequisites": [ "PHYS1011", "PHYS1012" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 3,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "ICT1301",
+                  "courseName": "Fundamentals of Information Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL1012",
+                  "courseName": "Academic English 2",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ENGL1011" ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Second Year",
+          "semesters": [
+            {
+              "term": 4,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2101",
+                  "courseName": "Discrete Mathematics",
+                  "lectureHours": 3,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "MATH1010" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2101",
+                  "courseName": "Network Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2102",
+                  "courseName": "Intro to Database Systems",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2011",
+                  "courseName": "Public Speaking (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [ "ENGL1012" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2012",
+                  "courseName": "Literature Review (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [ "ENGL1012" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ENGL2013",
+                  "courseName": "Report Writing (Blended L.)",
+                  "lectureHours": 1,
+                  "labHours": 0,
+                  "tutorialHours": 2,
+                  "contactHours": 3,
+                  "creditHours": 1,
+                  "prerequisites": [ "ENGL1012" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2103",
+                  "courseName": "Logic Design & Computer Organization",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ENG1011" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 5,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "ICT2201",
+                  "courseName": "Data Structure and Algorithms",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201", "ICT2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2202",
+                  "courseName": "Operating Systems Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT2103", "ICT1301" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2201",
+                  "courseName": "Web Programming and Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1301", "ICT2102" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS2201",
+                  "courseName": "Ethical Hacking and Pen. Testing",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET2201",
+                  "courseName": "Applied Cryptography",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1301" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ICT2203",
+                  "courseName": "Introduction to Software Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201", "ICT1301" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 6,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "SSD2301",
+                  "courseName": "Secure Web Applications Development - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "SSD2201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2302",
+                  "courseName": "Secure Software Design & Implementation - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "ICT2203" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2303",
+                  "courseName": "Web Application Security - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "SSD2201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2304",
+                  "courseName": "Ethical Hacking and Pen. Testing - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS2201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2305",
+                  "courseName": "Secure Windows/Linux OS - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "ICT2202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD2306",
+                  "courseName": "Client/Server Security Admin - OCT I",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "ICT2202" ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Third Year",
+          "semesters": [
+            {
+              "term": 7,
+              "desc": "1st Semester",
+              "courses": [
+                {
+                  "courseCode": "SSD3101",
+                  "courseName": "Object Oriented Analysis and Design",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT2203" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3102",
+                  "courseName": "Mobile Programming and Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201", "ICT1301" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3104",
+                  "courseName": "Embedded Systems Secure Development",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "ICT1201", "ICT2103" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3104",
+                  "courseName": "Cloud Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 1,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [ "NCS2101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "ISET3101",
+                  "courseName": "InfoSec Project Management (Blended L.)",
+                  "lectureHours": 2,
+                  "labHours": 0,
+                  "tutorialHours": 0,
+                  "contactHours": 2,
+                  "creditHours": 2,
+                  "prerequisites": [ "ICT1301" ],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 8,
+              "desc": "2nd Semester",
+              "courses": [
+                {
+                  "courseCode": "SSD3201",
+                  "courseName": "Malware Analysis: Tools and Techniques",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ "SSD2304", "SSD2201" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3204",
+                  "courseName": "Emerging Trends in Software Security",
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "prerequisites": [ ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3203",
+                  "courseName": "Secure Database Development",
+                  "prerequisites": [
+                    "ICT2102"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3203",
+                  "courseName": "Fundamentals of Digital Forensics ",
+                  "prerequisites": [
+                    "NCS2101"
+                  ],
+                  "lectureHours": 2,
+                  "labHours": 2,
+                  "tutorialHours": 0,
+                  "contactHours": 4,
+                  "creditHours": 3,
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3205",
+                  "courseName": "Capstone Project",
+                  "lectureHours": 1,
+                  "labHours": 4,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 3,
+                  "prerequisites": [],
+                  "corequisites": []
+                }
+              ]
+            },
+            {
+              "term": 9,
+              "desc": "Summer",
+              "courses": [
+                {
+                  "courseCode": "SSD3301",
+                  "courseName": "Software Verification and Validation - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "SSD3101" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3302",
+                  "courseName": "Database Programming and Security - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "SSD3203" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3303",
+                  "courseName": "Software Vulnerability Assessment - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "SSD3202" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3304",
+                  "courseName": "Practical Requirements Engineering - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "ICT2203" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "SSD3305",
+                  "courseName": "Secure Mobile Applications Development - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "SSD3102" ],
+                  "corequisites": []
+                },
+                {
+                  "courseCode": "NCS3306",
+                  "courseName": "Digital Forensics and Investigation - OCT II",
+                  "lectureHours": 0,
+                  "labHours": 5,
+                  "tutorialHours": 0,
+                  "contactHours": 5,
+                  "creditHours": 1,
+                  "prerequisites": [ "NCS3203" ],
+                  "corequisites": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+
+  ]
+}
