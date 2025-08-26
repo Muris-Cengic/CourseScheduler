@@ -109,6 +109,8 @@ const isCompatible = (chosen: Block[], candidate: Block[]) => {
   return true;
 };
 
+const publicUrl = (p: string) => new URL(p, import.meta.env.BASE_URL).toString();
+
 // Normalizes "NCS 3301" => "NCS3301"
 const normalize = (x: string) => (x || "").replace(/\s+/g, "").toUpperCase();
 
@@ -162,26 +164,26 @@ export default function CourseScheduler() {
     setStatus(`Loaded ${plans.length} study plan${plans.length > 1 ? "s" : ""}.`);
   };
 
-  // Auto-load study plans from /public
-  const loadPlansFromPublic = async () => {
-    try {
-      const r = await fetch("/Study_Plans_2020.json", { cache: "no-store" });
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      const json = await r.json();
-      ingestStudyPlans(json);
-    } catch (err: any) {
-      setStatus("Could not load Study_Plans_2020.json from /public.");
-    }
-  };
+// Auto-load study plans from /public (now base-safe)
+const loadPlansFromPublic = async () => {
+  try {
+    const r = await fetch(publicUrl("Study_Plans_2020.json"), { cache: "no-store" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const json = await r.json();
+    ingestStudyPlans(json);
+  } catch (err) {
+    setStatus("Could not load Study_Plans_2020.json from /public.");
+  }
+};
 
-  // Optionally try to auto-load ./Study_Plans_2020.json if present in public
-  useEffect(() => {
-    // best-effort silent attempt
-    fetch("/Study_Plans_2020.json").then(r => { if (r.ok) return r.json(); throw 0; })
-      .then((json) => { if (studyPlans.length === 0) ingestStudyPlans(json); })
-      .catch(() => void 0);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+// Silent try on mount (also base-safe)
+useEffect(() => {
+  fetch(publicUrl("Study_Plans_2020.json"))
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(json => { if (studyPlans.length === 0) ingestStudyPlans(json); })
+    .catch(() => void 0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   /* -------- Derived data -------- */
   const titles = useMemo(() => {
