@@ -671,7 +671,6 @@ const indirectDependents = useMemo(() => {
                                                   />
                                                   <Button
                                                     variant={selected ? "secondary" : "outline"}
-                                                    size="sm"
                                                     className={["h-4 px-2 text-xs", !selectable ? "opacity-50 cursor-not-allowed pointer-events-none" : ""].join(" ")}
                                                     disabled={!selectable}
                                                     aria-disabled={!selectable}
@@ -755,7 +754,6 @@ const indirectDependents = useMemo(() => {
                                       />
                                       <Button
                                         variant={selected ? "secondary" : "outline"}
-                                        size="sm"
                                         className={["h-4 px-2 text-xs", !selectable ? "opacity-50 cursor-not-allowed pointer-events-none" : ""].join(" ")}
                                         disabled={!selectable}
                                         aria-disabled={!selectable}
@@ -786,7 +784,6 @@ const indirectDependents = useMemo(() => {
             </div>
             <Button
               variant="outline"
-              size="sm"
               className={["h-7 px-2 text-xs", !selectedTitles.length ? "opacity-50 cursor-not-allowed pointer-events-none" : ""].join(" ")}
               onClick={clearSelections}
               disabled={!selectedTitles.length}
