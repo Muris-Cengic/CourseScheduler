@@ -438,10 +438,10 @@ const indirectDependents = useMemo(() => {
             Upload Sections as JSON
           </Button>
 
-
+{/* 
           <Button variant="secondary" onClick={loadPlansFromPublic}>
             Reload Study Plans
-          </Button>
+          </Button> */}
         </div>
       </div>
 
