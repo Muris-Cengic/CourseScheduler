@@ -1015,7 +1015,7 @@
                   "courseCode": "MATH1001",
                   "courseName": "Precalculus (W.B.)",
                   "description": "Math and Sciences",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 3,
                   "labHours": 0,
                   "tutorialHours": 2,
@@ -1027,7 +1027,7 @@
                   "courseCode": "ICT1011",
                   "courseName": "Introduction to Programming & Problem Solving (W.B.)",
                   "description": "Engineering Technology",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 2,
                   "labHours": 2,
                   "tutorialHours": 2,
@@ -1039,7 +1039,7 @@
                   "courseCode": "ENGL1001",
                   "courseName": "English Skills",
                   "description": "Humanities",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 3,
                   "labHours": 0,
                   "tutorialHours": 2,
@@ -1051,7 +1051,7 @@
                   "courseCode": "HUM1011",
                   "courseName": "Islamic Culture (W.B.)",
                   "description": "Humanities",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 3,
                   "labHours": 0,
                   "tutorialHours": 2,
@@ -1063,7 +1063,7 @@
                   "courseCode": "HUM1012",
                   "courseName": "Emirates Society & Culture (W.B.)",
                   "description": "Humanities",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 3,
                   "labHours": 0,
                   "tutorialHours": 2,
@@ -1075,7 +1075,7 @@
                   "courseCode": "PHYS1011",
                   "courseName": "Physics I (W.B.)",
                   "description": "Math and Sciences",
-                  "preRequisites": [
+                  "prerequisites": [
                     "MATH1001"
                   ],
                   "lectureHours": 3,
@@ -1089,7 +1089,7 @@
                   "courseCode": "PHYS1012",
                   "courseName": "Physics I Lab",
                   "description": "Math and Sciences",
-                  "preRequisites": [
+                  "prerequisites": [
                     "PHYS1011"
                   ],
                   "lectureHours": 0,
@@ -1109,7 +1109,7 @@
                   "courseCode": "ICT1201",
                   "courseName": "Object Oriented Programming in Java",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1011"
                   ],
                   "lectureHours": 2,
@@ -1123,7 +1123,7 @@
                   "courseCode": "ICT1202",
                   "courseName": "Intro to Computer Networks",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1011"
                   ],
                   "lectureHours": 2,
@@ -1137,7 +1137,7 @@
                   "courseCode": "MATH1010",
                   "courseName": "Calculus I (W.B.)",
                   "description": "Math and Sciences",
-                  "preRequisites": [
+                  "prerequisites": [
                     "MATH1001"
                   ],
                   "lectureHours": 2,
@@ -1151,7 +1151,7 @@
                   "courseCode": "ENGL1011",
                   "courseName": "Academic English 1",
                   "description": "Humanities",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 3,
                   "labHours": 0,
                   "tutorialHours": 2,
@@ -1163,7 +1163,7 @@
                   "courseCode": "ENG1011",
                   "courseName": "Intro to Computer Systems",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "PHYS1011",
                     "PHYS1012"
                   ],
@@ -1184,7 +1184,7 @@
                   "courseCode": "ICT1301",
                   "courseName": "Fundamentals of Information Security",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1202"
                   ],
                   "lectureHours": 2,
@@ -1198,7 +1198,7 @@
                   "courseCode": "ENGL1012",
                   "courseName": "Academic English 2",
                   "description": "Humanities",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ENGL1011"
                   ],
                   "lectureHours": 3,
@@ -1223,7 +1223,7 @@
                   "courseCode": "ICT2101",
                   "courseName": "Discrete Mathematics",
                   "description": "Math and Sciences",
-                  "preRequisites": [
+                  "prerequisites": [
                     "MATH1010"
                   ],
                   "lectureHours": 3,
@@ -1237,7 +1237,7 @@
                   "courseCode": "NCS2101",
                   "courseName": "Network Security",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1202"
                   ],
                   "lectureHours": 2,
@@ -1251,7 +1251,7 @@
                   "courseCode": "ICT2102",
                   "courseName": "Intro to Database Systems",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1201"
                   ],
                   "lectureHours": 2,
@@ -1265,7 +1265,7 @@
                   "courseCode": "ENGL2011",
                   "courseName": "Public Speaking (Blended L.)",
                   "description": "Humanities",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ENGL1012"
                   ],
                   "lectureHours": 1,
@@ -1279,7 +1279,7 @@
                   "courseCode": "ENGL2012",
                   "courseName": "Literature Review (Blended L.)",
                   "description": "Humanities",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ENGL1012"
                   ],
                   "lectureHours": 1,
@@ -1293,7 +1293,7 @@
                   "courseCode": "ENGL2013",
                   "courseName": "Report Writing (Blended L.)",
                   "description": "Humanities",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ENGL1012"
                   ],
                   "lectureHours": 1,
@@ -1307,7 +1307,7 @@
                   "courseCode": "ICT2103",
                   "courseName": "Logic Design & Computer Organization",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ENG1011"
                   ],
                   "lectureHours": 2,
@@ -1327,7 +1327,7 @@
                   "courseCode": "ICT2201",
                   "courseName": "Data Structure and Algorithms",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1201",
                     "ICT2101"
                   ],
@@ -1342,7 +1342,7 @@
                   "courseCode": "ICT2202",
                   "courseName": "Operating Systems Security",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2103",
                     "ICT1301"
                   ],
@@ -1357,7 +1357,7 @@
                   "courseCode": "SSD2201",
                   "courseName": "Web Programming and Security",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1301",
                     "ICT2102"
                   ],
@@ -1372,7 +1372,7 @@
                   "courseCode": "NCS2201",
                   "courseName": "Ethical Hacking and Pen. Testing",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "NCS2101"
                   ],
                   "lectureHours": 2,
@@ -1386,7 +1386,7 @@
                   "courseCode": "ISET2201",
                   "courseName": "Applied Cryptography",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1301"
                   ],
                   "lectureHours": 2,
@@ -1400,7 +1400,7 @@
                   "courseCode": "ICT2203",
                   "courseName": "Introduction to Software Security",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1201",
                     "ICT1301"
                   ],
@@ -1421,7 +1421,7 @@
                   "courseCode": "SSD2301",
                   "courseName": "Secure Web Applications Development - OCT I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD2201"
                   ],
                   "lectureHours": 0,
@@ -1435,7 +1435,7 @@
                   "courseCode": "SSD2302",
                   "courseName": "Secure Software Design & Implementation - OCT I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2203"
                   ],
                   "lectureHours": 0,
@@ -1449,7 +1449,7 @@
                   "courseCode": "SSD2303",
                   "courseName": "Web Application Security - OCT I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD2201"
                   ],
                   "lectureHours": 0,
@@ -1463,7 +1463,7 @@
                   "courseCode": "SSD2304",
                   "courseName": "Ethical Hacking and Pen. Testing - OCT I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "NCS2201"
                   ],
                   "lectureHours": 0,
@@ -1477,7 +1477,7 @@
                   "courseCode": "SSD2305",
                   "courseName": "Secure Windows/Linux OS - OCT I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2202"
                   ],
                   "lectureHours": 0,
@@ -1491,7 +1491,7 @@
                   "courseCode": "SSD2306",
                   "courseName": "Client/Server Security Admin - OCT I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2202"
                   ],
                   "lectureHours": 0,
@@ -1516,7 +1516,7 @@
                   "courseCode": "SSD3101",
                   "courseName": "Object Oriented Analysis and Design",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2203"
                   ],
                   "lectureHours": 2,
@@ -1530,7 +1530,7 @@
                   "courseCode": "SSD3102",
                   "courseName": "Mobile Programming and Security",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1201",
                     "ICT1301"
                   ],
@@ -1545,7 +1545,7 @@
                   "courseCode": "SSD3104",
                   "courseName": "Embedded Systems Secure Development",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1201",
                     "ICT2103"
                   ],
@@ -1560,7 +1560,7 @@
                   "courseCode": "NCS3104",
                   "courseName": "Cloud Security",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "NCS2101"
                   ],
                   "lectureHours": 2,
@@ -1574,7 +1574,7 @@
                   "courseCode": "ISET3101",
                   "courseName": "InfoSec Project Management (Blended L.)",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1301"
                   ],
                   "lectureHours": 2,
@@ -1594,7 +1594,7 @@
                   "courseCode": "SSD3201",
                   "courseName": "Malware Analysis: Tools and Techniques",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD2304",
                     "SSD2201"
                   ],
@@ -1609,7 +1609,7 @@
                   "courseCode": "SSD3202",
                   "courseName": "Multi-Language Secure Coding and Testing",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD3101"
                   ],
                   "lectureHours": 2,
@@ -1623,7 +1623,7 @@
                   "courseCode": "SSD3203",
                   "courseName": "Secure Database Development",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2102"
                   ],
                   "lectureHours": 2,
@@ -1637,7 +1637,7 @@
                   "courseCode": "MATH2012",
                   "courseName": "Probability and Statistics",
                   "description": "Math and Sciences",
-                  "preRequisites": [
+                  "prerequisites": [
                     "MATH1001"
                   ],
                   "lectureHours": 3,
@@ -1651,7 +1651,7 @@
                   "courseCode": "NCS3203",
                   "courseName": "Fundamentals of Digital Forensics",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "NCS2101"
                   ],
                   "lectureHours": 2,
@@ -1671,7 +1671,7 @@
                   "courseCode": "SSD3301",
                   "courseName": "Software Verification and Validation - OCT II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD3101"
                   ],
                   "lectureHours": 0,
@@ -1685,7 +1685,7 @@
                   "courseCode": "SSD3302",
                   "courseName": "Database Programming and Security - OCT II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD3203"
                   ],
                   "lectureHours": 0,
@@ -1699,7 +1699,7 @@
                   "courseCode": "SSD3303",
                   "courseName": "Software Vulnerability Assessment - OCT II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD3202"
                   ],
                   "lectureHours": 0,
@@ -1713,7 +1713,7 @@
                   "courseCode": "SSD3304",
                   "courseName": "Practical Requirements Engineering - OCT II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2203"
                   ],
                   "lectureHours": 0,
@@ -1727,7 +1727,7 @@
                   "courseCode": "SSD3305",
                   "courseName": "Secure Mobile Applications Development - OCT II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD3102"
                   ],
                   "lectureHours": 0,
@@ -1741,7 +1741,7 @@
                   "courseCode": "NCS3306",
                   "courseName": "Digital Forensics and Investigation - OCT II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "NCS3203"
                   ],
                   "lectureHours": 0,
@@ -1766,7 +1766,7 @@
                   "courseCode": "HUM2011",
                   "courseName": "Psychology",
                   "description": "Humanities",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ENGL1012"
                   ],
                   "lectureHours": 3,
@@ -1780,7 +1780,7 @@
                   "courseCode": "HUM1013",
                   "courseName": "Arabic Communication Skills (W.B.)",
                   "description": "Humanities",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 3,
                   "labHours": 0,
                   "tutorialHours": 2,
@@ -1792,7 +1792,7 @@
                   "courseCode": "ISET4101",
                   "courseName": "Risk and Security Management",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1301"
                   ],
                   "lectureHours": 2,
@@ -1806,7 +1806,7 @@
                   "courseCode": "SSD4101",
                   "courseName": "Graduation Project I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "See Notes Below"
                   ],
                   "lectureHours": 1,
@@ -1820,7 +1820,7 @@
                   "courseCode": "SSDxxxx",
                   "courseName": "Technical Elective I",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "See Major SSD Table"
                   ],
                   "lectureHours": 0,
@@ -1840,7 +1840,7 @@
                   "courseCode": "ISET4201",
                   "courseName": "Incident Handling and Response",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ISET4101"
                   ],
                   "lectureHours": 2,
@@ -1854,7 +1854,7 @@
                   "courseCode": "HUM3011",
                   "courseName": "Creativity, Innovation and Entrepreneurship",
                   "description": "Humanities",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ENGL2013",
                     "or completion of 60 credits"
                   ],
@@ -1869,7 +1869,7 @@
                   "courseCode": "ISET4202",
                   "courseName": "Ethics, Law & Policy in Cyberspace (Blended L.)",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT1301"
                   ],
                   "lectureHours": 2,
@@ -1883,7 +1883,7 @@
                   "courseCode": "SSD4201",
                   "courseName": "Graduation Project II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "SSD4101"
                   ],
                   "lectureHours": 1,
@@ -1897,7 +1897,7 @@
                   "courseCode": "SSDxxxx",
                   "courseName": "Technical Elective II",
                   "description": "Engineering Technology",
-                  "preRequisites": [
+                  "prerequisites": [
                     "See Major SSD Table"
                   ],
                   "lectureHours": 0,
@@ -1917,7 +1917,7 @@
                   "courseCode": "SSD4301",
                   "courseName": "On Job Training (Internship)",
                   "description": "Engineering Technology",
-                  "preRequisites": [],
+                  "prerequisites": [],
                   "lectureHours": 0,
                   "labHours": 1,
                   "tutorialHours": 0,
@@ -3246,7 +3246,7 @@
                 {
                   "courseCode": "SSD3203",
                   "courseName": "Secure Database Development",
-                  "preRequisites": [
+                  "prerequisites": [
                     "ICT2102"
                   ],
                   "lectureHours": 2,
@@ -3259,7 +3259,7 @@
                 {
                   "courseCode": "NCS3203",
                   "courseName": "Fundamentals of Digital Forensics ",
-                  "preRequisites": [
+                  "prerequisites": [
                     "NCS2101"
                   ],
                   "lectureHours": 2,
